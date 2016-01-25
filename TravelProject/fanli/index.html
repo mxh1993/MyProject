@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>海游旅游网-首页</title>
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/person.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/geolocation.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".mall_list a").click(function(){
+		var index = layer.open({
+			type: 1,
+			title: false,
+			closeBtn: false,
+			shadeClose: false,
+			offset: '25%',
+			content: "<div class='no_login_show'><h1>亲！您还没登哦！</h1><a href='login.html'>马上登录</a><a href='register.html'>免费注册<<a href='javascript:layer.closeAll();'>取消</a></div>"
+		});
+	});
+	$("#msg_bijia").click(function(){
+		layer.tips('请耐心等待一下，我们正在拼命开发中···','#msg_bijia');
+	});
+});
+</script>
+</head>
+<body onload="getLocation()">
+<div class="mobile">
+<div class="header">
+		<div id="m_city"><a href="html/SelectCity/selectcity.html">北京
+		<img src="images/xl.png" /></a></div>
+    <div class="m_name">海游旅游网</div>
+		<div class="m_login">
+				<a href="login.php"><img src="images/userlogin.png"></a>
+		</div>
+</div>
+<div class="top w">
+		<div class="m_banner" id="owl">
+				<a href="http://www.178hui.com" class="item"><img src="images/slide_3.jpg"></a>
+				<a href="#" class="item"><img src="images/slide_1.jpg"></a>
+				<a href="http://www.178hui.com" class="item"><img src="images/slide_2.jpg"></a>
+		</div>
+		<div class="m_nav">
+				<a href="http://m.178hui.com/mall/index.html"><img src="images/icon_home_drive@2x.png"><span>自助游学</span></a>
+				<a href="http://m.178hui.com/baoliao/index.html"><img src="images/icon_home_self_service@2x.png"><span>跟团游学</span></a>
+				<!--<a href="http://m.178hui.com/taobao/index.html"><img src="images/icon_home_ship@2x.png"><span>淘宝返利</span></a>
+				<a href="http://m.178hui.com/article/index.html"><img src="images/icon_home_ticket@2x.png"><span>购物资讯</span></a>
+				<a href="javascript:void(0);" id="msg_bijia"><img src="images/m-index_22.png"><span>比价网</span></a>
+				<a href="http://m.178hui.com/qiandao/index.html"><img src="images/m-index_24.png"><span>有奖签到</span></a>-->
+				<a href="http://m.178hui.com/order/index.html"><img src="images/m-index_26.png"><span>订单管理</span></a>
+				<a href="html/person/person.html"><img src="images/m-index_27.png"><span>会员中心</span></a>
+		</div>
+</div>
+<div class="xsqg">
+		<div class="xsqg_title"><span>限时抢购</span><em>
+				<a href="#">更多></a>
+				</em></div>
+		<a href="activity_view.html" target="_blank"><div class="xsqg_content">
+				<div class="content_left"><img src="images/xs1.jpg" /></div>
+				<div class="content_right">
+						<div class="content">哈尔滨（冰雪大世界+太阳岛雪博会）成人套餐票 门票特卖</div>
+						<div class="price">&yen;3,420</div>
+						<!--<div class="date"></div>-->
+						<div class="time-item">
+								<strong id="day_show">00</strong>
+								<span>天</span>
+								<strong id="hour_show">00</strong>
+								<span>:</span>
+								<strong id="minute_show">00</strong>
+								<span>:</span>
+								<strong id="second_show">00</strong>
+						</div>
+				</div>
+		</div></a>
+		<div class="m_baoliao w">
+				<div class="baoliao_title"><span>热门活动</span><em>
+						<a href="#"><img src="images/iconfont-shuaxin.png"></a>
+						</em></div>
+				<div class="baoliao_list">
+						<a href="activity_view.html">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/tour-1.png" /></div>
+						</div>
+						</a>
+						<a href="#">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/tour-2.png" /></div>
+						</div>
+						</a>
+						<a href="#">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/tour-3.png" /></div>
+						</div>
+						</a>
+				</div>
+				<div class="bl_more">
+						<a href="#">加载更多</a>
+				</div>
+		</div>
+		<!--<div class="m_baoliao w">
+				<div class="baoliao_title"><span>热门活动</span><em>
+						<a href="#"><img src="images/iconfont-shuaxin.png"></a>
+						</em></div>
+				<div class="baoliao_list">
+						<a href="baoliao_view.html">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/4.jpg" /></div>
+								<div class="bl_right">
+										<div class="bl_title">韩国现代（HYUNDAI) BD-YS2003 多功能养生壶 煎药壶2.0L</div>
+										<div class="bl_note">手机端：99元包邮</div>
+										<div class="bl_tag">
+												<div class="bl_price">￥99.00</div>
+												<div class="bl_oprice">￥138.00</div>
+												<div class="bl_time">07-10 12:33</div>
+												<div class="bl_mall">京东商城</div>
+										</div>
+								</div>
+						</div>
+						</a>
+						<a href="#">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/tour-2.png" /></div>
+								<div class="bl_right">
+										<div class="bl_title">韩国现代（HYUNDAI) BD-YS2003 多功能养生壶 煎药壶2.0L</div>
+										<div class="bl_note">手机端：99元包邮</div>
+										<div class="bl_tag">
+												<div class="bl_price">￥99.00</div>
+												<div class="bl_oprice">￥138.00</div>
+												<div class="bl_time">07-10 12:33</div>
+												<div class="bl_mall">京东商城</div>
+										</div>
+								</div>
+						</div>
+						</a>
+						<a href="#">
+						<div class="baoliao_content">
+								<div class="bl_img"><img src="images/tour-3.png" /></div>
+								<div class="bl_right">
+										<div class="bl_title">韩国现代（HYUNDAI) BD-YS2003 多功能养生壶 煎药壶2.0L韩国现代（HYUNDAI) BD-YS2003 多功能养生壶 煎药壶2.0L</div>
+										<div class="bl_note">手机端：99元包邮</div>
+										<div class="bl_tag">
+												<div class="bl_price">￥99.00</div>
+												<div class="bl_oprice">￥138.00</div>
+												<div class="bl_time">07-10 12:33</div>
+												<div class="bl_mall">京东商城</div>
+										</div>
+								</div>
+						</div>
+						</a>
+				</div>
+				<div class="bl_more">
+						<a href="#">加载更多</a>
+				</div>
+		</div>-->
+		<div class="m_user w">
+				<!--<a href="user.html">忆乡人***</a>
+    <a href="#">退出</a>-->
+				<a href="login.php">登录</a>
+				<a href="register.php">注册</a>
+				<a href="javascript:void(0);" class="backtop">返回顶部</a>
+		</div>
+		<div class="copyright">Copyright © 2012-2015 海游旅游网 版权所有</div>
+</div>
+<div class="gotop backtop" style="display:none;"></div>
+</body>
+</html>
+<script type="text/javascript">
+//限时抢购倒计时
+var EndTime= new Date('2016/12/22 01:50:00');
+var NowTime = new Date();
+var intDiff =EndTime.getTime() - NowTime.getTime();
+var leftsecond = parseInt(intDiff / 1000);
+
+function timer(intDiff){
+	window.setInterval(function(){
+	var day=0,
+		hour=0,
+		minute=0,
+		second=0;//时间默认值		
+	if(leftsecond > 0){
+		day = Math.floor(leftsecond / (60 * 60 * 24));
+		hour = Math.floor((leftsecond - day * 24 * 60 * 60) / 3600);
+		minute = Math.floor((leftsecond - day * 24 * 60 * 60 - hour * 3600) / 60);
+		second = Math.floor(leftsecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
+	}
+	if (hour <= 9) hour = '0' + hour;
+	if (minute <= 9) minute = '0' + minute;
+	if (second <= 9) second = '0' + second;
+	$('#day_show').html('<s></s>'+day);
+	$('#hour_show').html('<s id="h"></s>'+hour);
+	$('#minute_show').html('<s></s>'+minute);
+	$('#second_show').html('<s></s>'+second);
+	leftsecond--;
+	}, 1000);
+} 
+
+$(function(){
+	timer(intDiff);
+});
+</script>
+<script type="text/javascript">
+//返回顶部
+$(document).ready(function(){
+	$(window).scroll(function () {
+		var scrollHeight = $(document).height();
+		var scrollTop = $(window).scrollTop();
+		var $windowHeight = $(window).innerHeight();
+		scrollTop > 75 ? $(".gotop").fadeIn(200).css("display","block") : $(".gotop").fadeOut(200).css({"background-image":"url(images/iconfont-fanhuidingbu.png)"});
+	});
+	$('.backtop').click(function (e) {
+		$(".gotop").css({"background-image":"url(images/iconfont-fanhuidingbu_up.png)"});
+		e.preventDefault();
+		$('html,body').animate({ scrollTop:0});
+	});
+});
+</script>
