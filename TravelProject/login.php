@@ -1,4 +1,4 @@
-<?php
+1234567<?php
 	header("Content-type:text/html; charset=utf-8");
 	if(isset($_REQUEST['authcode']))
 	{
